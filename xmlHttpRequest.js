@@ -2,6 +2,7 @@ let xhr = new XMLHttpRequest();
 
 const urlOtraApi = 'https://swapi.dev/api/';
 const urlApiRickyMorty = 'https://rickandmortyapi.com/api/'
+const pokeapi = 'https://pokeapi.co/api/v2/pokemon/ditto';
 xhr.open('GET', 'https://randomuser.me/api/?results=1');
 xhr.send();
 // GET --> Obtener información
