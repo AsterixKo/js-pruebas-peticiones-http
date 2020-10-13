@@ -7,7 +7,7 @@ xhr.send();
 
 xhr.onload = function() {
     if(xhr.status != 200){
-        console.log(`Error ${xhr.status}`);
+        console.log(`Ha ocurrido un error con codigo ${xhr.status} y mensaje ${xhr.statusText}`);
     }else{
         console.log(`Respuesta ${xhr.response}`);
     }
