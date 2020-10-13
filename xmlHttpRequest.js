@@ -1,5 +1,7 @@
 let xhr = new XMLHttpRequest();
 
+const urlOtraApi = 'https://swapi.dev/api/';
+const urlApiRickyMorty = 'https://rickandmortyapi.com/api/'
 xhr.open('GET', 'https://randomuser.me/api/?results=1');
 xhr.send();
 // GET --> Obtener información
@@ -10,5 +12,14 @@ xhr.onload = function() {
         console.log(`Ha ocurrido un error con codigo ${xhr.status} y mensaje ${xhr.statusText}`);
     }else{
         console.log(`Respuesta ${xhr.response}`);
+        const parseResponse = JSON.parse(xhr.response);
+        console.log('Respuesta parseada:', parseResponse);
     }
+};
+
+//esto es un objeto, no JSON. Necesitamos convertir el JSON
+const ferrari = {
+    marca: 'Ferrari',
+    anio: 2020,
+    color: 'Rojo'
 };
